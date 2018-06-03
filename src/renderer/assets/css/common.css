@@ -1,0 +1,85 @@
+html, body, #app {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: #1b1b1b;
+}
+#data {
+  padding: 0px 20px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.wh-100 {
+  width: 100%;
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+.color-main {
+  color: #f2f2f2;
+}
+.color-dark {
+  color: #d8d8d8;
+}
+.color-orange {
+  color: #fb8d53;
+}
+.color-yellow {
+  color: #ffc000;
+}
+.color-blue {
+  color: #00b0f0;
+}
+.color-green {
+  color: #92d050;
+}
+.color-red {
+  color: red;
+}
+.el-menu-item.is-active {
+  background: #595959 !important;
+}
+.custom-bar::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.custom-bar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 10px;
+  background: #535353;
+}
+.custom-bar::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background: #EDEDED;
+}
+.dw-dialog {
+  height: 80%;
+}
+.dw-dialog .el-dialog__body {
+  height: 80%;
+  position: relative;
+}
+.dw-dialog.el-dialog {
+  background-color: #f2f2f2;
+}
+.dw-dialog .el-dialog__header {
+  display: none;
+}
+.dw-input .el-input__inner {
+  color: #5575c4;
+}
+.el-input.is-disabled .el-input__inner {
+  background-color: #fff;
+  border: 1px solid #dcdfe6;
+  color: #5575c4;
+  cursor: initial;
+}
