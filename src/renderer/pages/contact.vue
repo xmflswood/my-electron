@@ -10,7 +10,7 @@
         :showData="i"
         @confirmDelete="deleteContact(index)"
         @editContact="editContact(index)"
-        @checkContack="checkContack(index)">
+        @checkContact="checkContact(index)">
       </contact-show>
       <div v-if="list.length === 0" class="color-main">暂无档案数据</div>
     </div>
@@ -35,7 +35,7 @@
   import {remote} from 'electron'
   const path = require('path')
   const fs = require('fs')
-  const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'db.json') : path.resolve(remote.app.getAppPath(), 'contact-db.json')
+  const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'contact-db.json') : path.resolve(remote.app.getAppPath(), 'contact-db.json')
   // 创建db文件
   if (!fs.existsSync(dbPath)) {
     fs.writeFileSync(dbPath, JSON.stringify([]))
@@ -97,7 +97,7 @@
         this.showDetail = true
         this.readOnly = false
       },
-      checkContack (index) {
+      checkContact (index) {
         this.itemTemp = _.cloneDeep(this.list[index])
         this.isEdit = false
         this.showDetail = true

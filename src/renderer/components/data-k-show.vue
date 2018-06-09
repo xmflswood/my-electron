@@ -1,17 +1,16 @@
 <template>
   <div class="color-dark contact-item flex">
-    <div class="contact-item-box flex-1" title="点击查看" @click="$emit('checkContact')">
-      <div class="contact-item-title">{{showData.projectName}}</div>
-      <div class="contact-item-normal">{{showData.contactNum}}</div>
-      <div class="contact-item-normal">{{showData.date}}</div>
+    <div class="contact-item-box flex-1" title="点击查看" @click="$emit('checkK')">
+      <div class="contact-item-title">{{showData.kName}}</div>
+      <div class="contact-item-normal">{{showData.kNum}}</div>
     </div>
     <div class="btn-box">
-      <el-button round type="primary" size="small" @click="$emit('editContact')">修 改</el-button>
+      <el-button round type="primary" size="small" @click="$emit('editK')">修 改</el-button>
       <el-button round type="info" size="small" @click="showDelete = true">删 除</el-button>
     </div>
     <el-dialog
       :visible.sync="showDelete">
-      <span>确定删除该档案？</span>
+      <span>确定删除该物资？</span>
       <span slot="footer">
         <el-button type="primary" @click="confirmDelete" size="small" round :disabled="doing">确 定</el-button>
         <el-button @click="showDelete = false" round size="small">取 消</el-button>
@@ -22,7 +21,7 @@
 
 <script>
   export default {
-    name: 'contact-show',
+    name: 'data-k-show',
     props: {
       showData: {
         type: Object,

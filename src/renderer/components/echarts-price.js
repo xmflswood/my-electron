@@ -3,7 +3,7 @@ export default function (index) {
     grid: {
       x: 50,
       y: 80,
-      x2: 20,
+      x2: 50,
       y2: 20
     },
     tooltip: {
@@ -15,12 +15,7 @@ export default function (index) {
     xAxis: [
       {
         boundaryGap: false,
-        data: [
-          '1',
-          '2',
-          '3',
-          '321'
-        ],
+        data: [],
         axisLabel: {
           color: '#d8d8d8'
         },
@@ -49,6 +44,7 @@ export default function (index) {
       s = [
         {
           type: 'line',
+          symbolSize: 0,
           lineStyle: {
             opacity: 0
           },
@@ -69,12 +65,13 @@ export default function (index) {
               }]
             }
           },
-          data: [30, 90, 60, 20]
+          data: []
         },
         {
           type: 'line',
+          symbolSize: 0,
           smooth: true,
-          data: [4, 200, 3],
+          data: [],
           lineStyle: {
             color: 'red',
             type: 'dotted'
@@ -86,6 +83,7 @@ export default function (index) {
       s = [
         {
           type: 'bar',
+          symbolSize: 0,
           itemStyle: {
             color: {
               type: 'linear',
@@ -100,12 +98,13 @@ export default function (index) {
               }]
             }
           },
-          data: [30, 90, 60, 20]
+          data: []
         },
         {
           type: 'line',
           smooth: true,
-          data: [4, 200, 3],
+          symbolSize: 0,
+          data: [],
           itemStyle: {
             color: 'Yellow'
           },
@@ -120,18 +119,20 @@ export default function (index) {
       s = [
         {
           type: 'line',
+          symbolSize: 0,
           lineStyle: {
             color: 'yellow'
           },
           itemStyle: {
             color: 'Yellow'
           },
-          data: [30, 90, 60, 20]
+          data: []
         },
         {
           type: 'line',
+          symbolSize: 0,
           smooth: true,
-          data: [4, 200, 3],
+          data: [],
           itemStyle: {
             color: 'green'
           },

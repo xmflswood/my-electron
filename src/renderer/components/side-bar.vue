@@ -27,6 +27,10 @@
           <i class="icon iconfont icon-sousuo"></i>
         </div>
       </el-menu-item>
+      <el-menu-item index="/else">
+        <div slot="title" class="menu-item">其他
+        </div>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

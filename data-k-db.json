@@ -1,0 +1,22 @@
+[
+  {
+    "kName": "天天",
+    "kNum": "111",
+    "materials": [
+      {
+        "name": "方坯",
+        "rate": "100"
+      }
+    ]
+  },
+  {
+    "kName": "ff",
+    "kNum": "22",
+    "materials": [
+      {
+        "name": "方坯",
+        "rate": "20"
+      }
+    ]
+  }
+]

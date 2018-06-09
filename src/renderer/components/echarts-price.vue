@@ -2,8 +2,8 @@
   <div class="wh-100">
     <div class="detail" :style="{float: index%2 === 1 ? 'left' : 'right'}">
       <div class="tips color-main">
-        <div class="tips-title">铜均价</div>
-        <div class="tips-price">1265.87</div>
+        <div class="tips-title">方坯均价</div>
+        <div class="tips-price">1233</div>
         <div class="rate">
           <span style="margin-right: 20px;">
             月同比
@@ -53,19 +53,7 @@
         let options = setting(this.index)
         this.ec.setOption(options)
       },
-      setData () {
-        let o = {
-          series: [
-            {
-              name: '价格1',
-              data: [2, 0, 6]
-            },
-            {
-              name: '价格2',
-              data: [4, 5, 1]
-            }
-          ]
-        }
+      setOption (o) {
         this.ec.setOption(o)
       }
     },

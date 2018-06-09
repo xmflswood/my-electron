@@ -1,13 +1,53 @@
 <template>
   <div :style="{height: boxHeight}" class="flex-column">
     <div v-if="canShow" class="flex-column wh-100" style="padding: 10px 0;box-sizing: border-box;">
-      <index-price v-for="(i, index) in source" :key="i" :index="index"></index-price>
+      <div>
+        <el-date-picker
+          v-model="dates"
+          type="daterange"
+          placeholder="选择日期"
+          value-format="yyyy-MM-dd"
+          :picker-options="pickerOptions">
+        </el-date-picker>
+        <div class="selector">
+          <span class="color-main">物资选择：</span>
+          <el-select v-model="k" style="width: 150px;">
+            <el-option
+              v-for="item in kOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
+        </div>
+        <div class="selector">
+          <span class="color-main">合同选择:</span>
+          <el-select v-model="k" style="width: 150px;">
+            <el-option
+              v-for="item in kOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
+        </div>
+      </div>
+      <index-price
+        v-for="(i, index) in source"
+        :key="i"
+        :index="index"
+        :ref="'e' + index">
+      </index-price>
     </div>
   </div>
 </template>
 
 <script>
+  import _ from 'lodash'
   import indexPrice from '../components/index-price.vue'
+  import {remote} from 'electron'
+  const path = require('path')
+  const fs = require('fs')
   export default {
     name: 'index',
     components: {
@@ -17,16 +57,40 @@
       return {
         source: [1, 2, 3],
         boxHeight: '',
-        canShow: false
+        canShow: false,
+        dates: '',
+        allData: [],
+        k: '',
+        allK: [],
+        kOptions: [],
+        pickerOptions: {
+          disabledDate (t) {
+            t = +new Date(t) + window.$h8
+            return !window.$data.some((i) => +new Date(i.date) === t)
+          }
+        },
+        main: {
+          price: [],
+          expectPrice: [],
+          min: null,
+          max: null,
+          dates: []
+        }
       }
     },
     mounted () {
       this.setHeight()
-      window.onresize = () => {
-        this.setHeight()
-      }
+      let debounceHeight = _.debounce(this.setHeight, 200)
+      window.addEventListener('resize', debounceHeight)
+      this.setKoptions()
     },
     methods: {
+      setKoptions () {
+        const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'data-k-db.json') : path.resolve(remote.app.getAppPath(), 'data-k-db.json')
+        const a = JSON.parse(fs.readFileSync(dbPath))
+        this.allK = a
+        this.kOptions = a.map(i => i.kName)
+      },
       setHeight () {
         this.canShow = false
         let l = this.source.length
@@ -35,11 +99,92 @@
         this.boxHeight = l * itemHeight + 'px'
         this.$nextTick(() => {
           this.canShow = true
+          this.$nextTick(() => {
+            this.setData0()
+          })
         })
+      },
+      setMain () {
+        this.main.price = this.allData.map(i => i.price)
+        this.main.expectPrice = this.allData.map((i) => i.expectPrice)
+        this.main.min = _.minBy(this.allData, 'price').price - 50
+        this.main.max = _.maxBy(this.allData, 'price').price + 50
+        this.main.dates = this.allData.map(i => i.date)
+      },
+      setData0 () {
+        let o = {
+          series: [
+            {
+              name: '价格',
+              data: this.main.price
+            },
+            {
+              name: '预期价格',
+              data: this.main.expectPrice
+            }
+          ],
+          xAxis: [
+            {
+              data: this.main.dates
+            }
+          ],
+          yAxis: [
+            {
+              min: this.main.min,
+              max: this.main.max
+            }
+          ]
+        }
+        this.$refs['e0'][0].setOption(o)
+      },
+      setData1 () {
+        let rate = _.find(this.allK, {kName: this.k}).materials[0].rate * 0.01
+        let o = {
+          series: [
+            {
+              name: '价格',
+              data: this.main.price.map(i => Number(i * rate).toFixed(2))
+            },
+            {
+              name: '预期价格',
+              data: this.main.expectPrice.map(i => Number(i * rate).toFixed(2))
+            }
+          ],
+          xAxis: [
+            {
+              data: this.main.dates
+            }
+          ],
+          yAxis: [
+            {
+              min: Number(this.main.min * rate).toFixed(),
+              max: Number(this.main.max * rate).toFixed()
+            }
+          ]
+        }
+        this.$refs['e1'][0].setOption(o)
+      }
+    },
+    watch: {
+      dates (v) {
+        let d = window.$data
+        let start = _.findIndex(d, {date: v[0]})
+        let end = _.findIndex(d, {date: v[1]})
+        this.allData = _.cloneDeep(d.slice(start, end + 1))
+        this.setMain()
+        this.setData0()
+      },
+      k (v) {
+        this.setData1()
       }
     }
   }
 </script>
 
 <style scoped>
+  .selector {
+    display: inline-block;
+    width: 250px;
+    margin-left: 20px;
+  }
 </style>
