@@ -28,6 +28,6 @@ new Vue({
 
 function getData () {
   const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'price-db.json') : path.resolve(remote.app.getAppPath(), 'price-db.json')
-  window.$data = JSON.parse(fs.readFileSync(dbPath))['方培']
+  window.$data = JSON.parse(fs.readFileSync(dbPath))['方坯']
 }
 getData()

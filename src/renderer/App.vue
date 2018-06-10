@@ -2,7 +2,9 @@
   <div id="app" class="flex">
     <side-bar></side-bar>
     <div id="data" class="flex-1">
-      <router-view></router-view>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>

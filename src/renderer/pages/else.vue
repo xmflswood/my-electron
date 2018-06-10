@@ -1,8 +1,12 @@
 <template>
-  <div>
-    2222222
-    <div>2132321231231</div>
-    <el-button @click="main">213</el-button>
+  <div style="padding: 10px 0;">
+    <el-button @click="main" round type="primary">新增价格数据</el-button>
+    <div class="color-main">
+      <span>设定合同展示跌涨幅范围:</span>
+      <el-input v-model="rate" style="display: inline-block;width: 150px;"></el-input> %
+      <el-button @click="saveRate" round type="primary" size="small">保存</el-button>
+    </div>
+    <h3 class="color-main">数据保存在{{showPrice}}/*.json文件中,请妥善保管。</h3>
   </div>
 </template>
 
@@ -23,9 +27,27 @@
     name: 'else-page',
     data () {
       return {
+        rate: '',
+        showPrice: process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../') : path.resolve(remote.app.getAppPath())
       }
     },
+    created () {
+      this.init()
+    },
     methods: {
+      saveRate () {
+        const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'else-db.json') : path.resolve(remote.app.getAppPath(), 'else-db.json')
+        fs.writeFileSync(dbPath, JSON.stringify({contactRate: +this.rate / 100}, null, 2))
+        this.$message.success('保存成功')
+      },
+      init () {
+        const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'else-db.json') : path.resolve(remote.app.getAppPath(), 'else-db.json')
+        // 创建db文件
+        if (!fs.existsSync(dbPath)) {
+          fs.writeFileSync(dbPath, JSON.stringify({contactRate: 0.03}, null, 2))
+        }
+        this.rate = JSON.parse(fs.readFileSync(dbPath)).contactRate * 100
+      },
       openFile () {
         return new Promise((resolve, reject) => {
           dialog.showOpenDialog({
@@ -39,8 +61,7 @@
         })
       },
       async main () {
-        let path = '123'
-        path = await this.openFile()
+        let path = await this.openFile()
         if (path) {
           let source = xlsx.parse(path)
           source = source[0].data
@@ -56,10 +77,12 @@
           myData[parseData.name] = _.sortBy(_.uniqBy(newArray, 'date'), [(o) => +new Date(o.date)])
         }
         fs.writeFileSync(dbPath, JSON.stringify(myData, null, 2))
+        window.$data = JSON.parse(fs.readFileSync(dbPath))['方坯']
+        this.$message.success('新增数据成功')
       },
       parseData (source) {
         let o = {
-          name: '方培',
+          name: '方坯',
           data: []
         }
         let start = 8
@@ -75,6 +98,11 @@
           }
         }
         return o
+      }
+    },
+    watch: {
+      $route (v) {
+        this.init()
       }
     }
   }

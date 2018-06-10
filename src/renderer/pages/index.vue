@@ -22,9 +22,9 @@
         </div>
         <div class="selector">
           <span class="color-main">合同选择:</span>
-          <el-select v-model="k" style="width: 150px;">
+          <el-select v-model="contactNum" style="width: 150px;">
             <el-option
-              v-for="item in kOptions"
+              v-for="item in contactOptions"
               :key="item"
               :label="item"
               :value="item">
@@ -63,6 +63,9 @@
         k: '',
         allK: [],
         kOptions: [],
+        allContact: [],
+        contactOptions: [],
+        contactNum: '',
         pickerOptions: {
           disabledDate (t) {
             t = +new Date(t) + window.$h8
@@ -83,6 +86,7 @@
       let debounceHeight = _.debounce(this.setHeight, 200)
       window.addEventListener('resize', debounceHeight)
       this.setKoptions()
+      this.setContactoptions()
     },
     methods: {
       setKoptions () {
@@ -90,6 +94,12 @@
         const a = JSON.parse(fs.readFileSync(dbPath))
         this.allK = a
         this.kOptions = a.map(i => i.kName)
+      },
+      setContactoptions () {
+        const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'contact-db.json') : path.resolve(remote.app.getAppPath(), 'contact-db.json')
+        const a = JSON.parse(fs.readFileSync(dbPath))
+        this.allContact = a
+        this.contactOptions = a.map(i => i.contactNum)
       },
       setHeight () {
         this.canShow = false
@@ -138,6 +148,7 @@
         this.$refs['e0'][0].setOption(o)
       },
       setData1 () {
+        if (!this.k) return
         let rate = _.find(this.allK, {kName: this.k}).materials[0].rate * 0.01
         let o = {
           series: [
@@ -163,19 +174,87 @@
           ]
         }
         this.$refs['e1'][0].setOption(o)
+      },
+      setData2 () {
+        if (!this.contactNum) return
+        const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'else-db.json') : path.resolve(remote.app.getAppPath(), 'else-db.json')
+        let contactRate = JSON.parse(fs.readFileSync(dbPath)).contactRate * 100
+        let contact = _.find(this.allContact, {contactNum: this.contactNum})
+        let s = contact.subjects.map(i => i.nums * i.price)
+        // eslint-disable-next-line
+        let sum = eval(s.join('+'))
+        // rates = rate * nums
+        let rates = contact.subjects.map(i => _.find(this.allK, {kName: i.subject}).materials[0].rate * 0.01 * i.nums)
+        // eslint-disable-next-line
+        let need = eval(rates.join('+'))
+        let trueRates = this.main.price.map(i => {
+          let a = Number(i * need)
+          let p = Number((a - sum) / sum * 100).toFixed(2)
+          if (p > contactRate || p < -contactRate) {
+            return p
+          }
+          return 0
+        })
+        let expectRates = this.main.expectPrice.map(i => {
+          let a = Number(i * need)
+          let p = Number((a - sum) / sum * 100).toFixed(2)
+          if (p > contactRate || p < -contactRate) {
+            return p
+          }
+          return 0
+        })
+        let o = {
+          series: [
+            {
+              name: '当日与合同相比(%)',
+              data: trueRates
+            },
+            {
+              name: '当日预期与合同相比(%)',
+              data: expectRates
+            }
+          ],
+          xAxis: [
+            {
+              data: this.main.dates
+            }
+          ],
+          yAxis: [
+            {
+              axisLabel: {
+                show: true,
+                formatter: `{value}%`
+              }
+              // min: Number(this.main.min * need).toFixed(),
+              // max: Number(this.main.max * need).toFixed()
+            }
+          ]
+        }
+        this.$refs['e2'][0].setOption(o)
       }
     },
     watch: {
-      dates (v) {
-        let d = window.$data
-        let start = _.findIndex(d, {date: v[0]})
-        let end = _.findIndex(d, {date: v[1]})
-        this.allData = _.cloneDeep(d.slice(start, end + 1))
-        this.setMain()
-        this.setData0()
+      $route () {
+        this.setContactoptions()
+        this.setKoptions()
       },
-      k (v) {
+      dates (v) {
+        if (v) {
+          let d = window.$data
+          let start = _.findIndex(d, {date: v[0]})
+          let end = _.findIndex(d, {date: v[1]})
+          this.allData = _.cloneDeep(d.slice(start, end + 1))
+          this.setMain()
+          this.setData0()
+          this.setData1()
+          this.setData2()
+        }
+      },
+      k () {
         this.setData1()
+      },
+      contactNum () {
+        this.setData2()
       }
     }
   }

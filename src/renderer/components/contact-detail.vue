@@ -26,13 +26,21 @@
       <div v-for="(i, index) in propsData.subjects" :key="index">
         <el-row class="input-row">
           <span class="input-title">标的物1选择:</span>
-          <el-input class="bdw-input" v-model="i.subject" :disabled="readOnly"></el-input>
+          <el-select v-model="i.subject" style="width: 150px;" :disabled="readOnly">
+            <el-option
+              v-for="item in kOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
           <span class="input-title">数量:</span>
           <el-input class="bdw-input" v-model="i.nums" :disabled="readOnly"></el-input>
         </el-row>
         <el-row class="input-row">
           <span class="input-title">中标价格:</span>
           <el-input class="bdw-input" v-model="i.price" :disabled="readOnly"></el-input>
+          <span> (单个标的物)</span>
           <i v-if="propsData.subjects.length > 1 && !readOnly" class="el-icon-delete delete-subject" @click="deleteSubject(index)"></i>
         </el-row>
       </div>
@@ -42,6 +50,9 @@
 </template>
 
 <script>
+  import {remote} from 'electron'
+  const path = require('path')
+  const fs = require('fs')
   export default {
     name: 'contact-detail',
     props: {
@@ -56,7 +67,11 @@
     },
     data () {
       return {
+        kOptions: []
       }
+    },
+    created () {
+      this.setKoptions()
     },
     methods: {
       addSubject () {
@@ -69,6 +84,11 @@
       },
       deleteSubject (index) {
         this.propsData.subjects.splice(index, 1)
+      },
+      setKoptions () {
+        const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'data-k-db.json') : path.resolve(remote.app.getAppPath(), 'data-k-db.json')
+        const a = JSON.parse(fs.readFileSync(dbPath))
+        this.kOptions = a.map(i => i.kName)
       }
     },
     watch: {
