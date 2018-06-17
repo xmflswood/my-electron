@@ -11,7 +11,7 @@
 
 <script>
   import sideBar from './components/side-bar.vue'
-
+  
   export default {
     name: 'dw',
     components: {

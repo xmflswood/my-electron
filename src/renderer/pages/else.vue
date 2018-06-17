@@ -79,6 +79,7 @@
         fs.writeFileSync(dbPath, JSON.stringify(myData, null, 2))
         window.$data = JSON.parse(fs.readFileSync(dbPath))['方坯']
         this.$message.success('新增数据成功')
+        this.$store.commit('SET_DONE', true)
       },
       parseData (source) {
         let o = {

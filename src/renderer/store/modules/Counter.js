@@ -1,6 +1,6 @@
 const state = {
   main: 0,
-  contactRate: 0.03
+  done: false
 }
 
 const mutations = {
@@ -10,8 +10,8 @@ const mutations = {
   INCREMENT_MAIN_COUNTER (state) {
     state.main++
   },
-  SET_CONTACT_RATE (state, rate) {
-    state.contactRate = rate
+  SET_DONE (state, bl) {
+    state.done = bl
   }
 }
 

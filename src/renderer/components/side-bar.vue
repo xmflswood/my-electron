@@ -7,22 +7,22 @@
       text-color="#bfbfbc"
       active-text-color="#f2f2f2"
       style="height: 100%;border: none;">
-      <el-menu-item index="/">
-        <div slot="title" class="menu-item">首页
+      <el-menu-item index="/" :disabled="disabled">
+        <div slot="title" class="menu-item" :disabled="disabled">首页
           <i class="icon iconfont icon-shouye"></i>
         </div>
       </el-menu-item>
-      <el-menu-item index="/contact">
+      <el-menu-item index="/contact" :disabled="disabled">
         <div slot="title" class="menu-item">合同档案管理
           <i class="icon iconfont icon-dangan"></i>
         </div>
       </el-menu-item>
-      <el-menu-item index="/data-k">
+      <el-menu-item index="/data-k" :disabled="disabled">
         <div slot="title" class="menu-item">K值数据库
           <i class="icon iconfont icon-chilun"></i>
         </div>
       </el-menu-item>
-      <el-menu-item index="/data-search">
+      <el-menu-item index="/data-search" :disabled="disabled">
         <div slot="title" class="menu-item">数据查询
           <i class="icon iconfont icon-sousuo"></i>
         </div>
@@ -36,12 +36,36 @@
 </template>
 
 <script>
+  import {remote} from 'electron'
+  const fs = require('fs')
+  const path = require('path')
+
   export default {
     data () {
       return {
+        disabled: false
       }
     },
     methods: {
+    },
+    mounted () {
+      const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'price-db.json') : path.resolve(remote.app.getAppPath(), 'price-db.json')
+      if (!JSON.parse(fs.readFileSync(dbPath))['方坯']) {
+        this.$router.replace({name: 'else'})
+        this.disabled = true
+      }
+    },
+    computed: {
+      done () {
+        return this.$store.state.Counter.done
+      }
+    },
+    watch: {
+      done (v) {
+        if (v) {
+          this.disabled = false
+        }
+      }
     }
   }
 </script>

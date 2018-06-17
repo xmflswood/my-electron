@@ -329,6 +329,10 @@
       }
     },
     watch: {
+      $route () {
+        this.setKoptions()
+        this.setContactoptions()
+      },
       type (v) {
         this.sub = ''
         if (v === '原材料') {

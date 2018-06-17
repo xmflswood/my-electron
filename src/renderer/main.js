@@ -17,6 +17,7 @@ Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 window.$h8 = 1000 * 60 * 60 * 8
+getData()
 
 /* eslint-disable no-new */
 new Vue({
@@ -30,4 +31,3 @@ function getData () {
   const dbPath = process.env.NODE_ENV === 'production' ? path.resolve(remote.app.getAppPath(), '../', 'price-db.json') : path.resolve(remote.app.getAppPath(), 'price-db.json')
   window.$data = JSON.parse(fs.readFileSync(dbPath))['方坯']
 }
-getData()

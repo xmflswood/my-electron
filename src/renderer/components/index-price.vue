@@ -1,10 +1,10 @@
 <template>
   <div class="flex-1">
-    <div class="detail" :style="{float: index%2 === 1 ? 'left' : 'right'}">
+    <div v-if="index !== 2" class="detail" :style="{float: index%2 === 1 ? 'left' : 'right'}">
       <div class="tips color-main">
-        <div class="tips-title">方坯均价</div>
-        <div class="tips-price">1233</div>
-        <div class="rate">
+        <div class="tips-title">{{name}}均价</div>
+        <div class="tips-price">{{price}}</div>
+        <!-- <div class="rate">
           <span style="margin-right: 20px;">
             月同比
             <i class="icon iconfont icon-msnui-triangle-down color-red"></i>
@@ -15,12 +15,12 @@
             <i class="icon iconfont icon-msnui-triangle-up color-green"></i>
             12%
           </span>
-        </div>
+        </div> -->
       </div>
     </div>
-    <div class="ec-box color-main" :style="{float: index%2 === 0 ? 'right' : 'left'}">
+    <div class="ec-box color-main" :style="{float: index%2 === 0 ? 'right' : 'left', width: index === 2 ? '100%' : '60%'}">
       <div class="title">
-        <span class="price-title" :style="{color: color}">方坯</span><span>价格走势图</span>
+        <span class="price-title" :style="{color: color}">{{name}}</span><span>价格走势图</span>
       </div>
       <div class="ec"></div>
     </div>
@@ -36,6 +36,13 @@
       index: {
         type: Number,
         required: true
+      },
+      k: {
+        type: String,
+        default: '--'
+      },
+      price: {
+        type: String
       }
     },
     data () {
@@ -67,6 +74,16 @@
             return '#0070c0'
           case 2:
             return 'Yellow'
+        }
+      },
+      name () {
+        switch (this.index) {
+          case 0:
+            return '方坯'
+          case 1:
+            return this.k
+          case 2:
+            return '合同'
         }
       }
     }

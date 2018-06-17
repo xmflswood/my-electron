@@ -34,6 +34,8 @@
       </div>
       <index-price
         v-for="(i, index) in source"
+        :k="k"
+        :price="prices[index]"
         :key="i"
         :index="index"
         :ref="'e' + index">
@@ -60,7 +62,7 @@
         canShow: false,
         dates: '',
         allData: [],
-        k: '',
+        k: '--',
         allK: [],
         kOptions: [],
         allContact: [],
@@ -78,7 +80,8 @@
           min: null,
           max: null,
           dates: []
-        }
+        },
+        prices: ['--', '--']
       }
     },
     mounted () {
@@ -110,7 +113,11 @@
         this.$nextTick(() => {
           this.canShow = true
           this.$nextTick(() => {
-            this.setData0()
+            if (this.dates && this.dates.length > 0) {
+              this.setData0()
+              this.setData1()
+              this.setData2()
+            }
           })
         })
       },
@@ -146,10 +153,13 @@
           ]
         }
         this.$refs['e0'][0].setOption(o)
+        // eslint-disable-next-line
+        this.$set(this.prices, 0, Number(eval(this.main.price.join('+'))  / this.main.dates.length).toFixed(2))
       },
       setData1 () {
-        if (!this.k) return
+        if (!this.k || this.k === '--') return
         let rate = _.find(this.allK, {kName: this.k}).materials[0].rate * 0.01
+        let truePrice = this.main.price.map(i => Number(i * rate).toFixed(2))
         let o = {
           series: [
             {
@@ -174,6 +184,8 @@
           ]
         }
         this.$refs['e1'][0].setOption(o)
+        // eslint-disable-next-line
+        this.$set(this.prices, 1, Number(eval(truePrice.join('+'))  / this.main.dates.length).toFixed(2))
       },
       setData2 () {
         if (!this.contactNum) return
@@ -230,6 +242,8 @@
             }
           ]
         }
+        // eslint-disable-next-line
+        this.$set(this.prices, 2, Number(eval(this.main.price.join('+'))  / this.main.dates.length).toFixed(2))
         this.$refs['e2'][0].setOption(o)
       }
     },
