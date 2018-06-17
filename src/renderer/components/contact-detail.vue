@@ -92,6 +92,9 @@
       }
     },
     watch: {
+      $route () {
+        this.setKoptions()
+      }
     }
   }
 </script>

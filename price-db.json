@@ -3,87 +3,87 @@
     {
       "date": "2017-05-31",
       "price": 3360,
-      "expectPrice": 3364
+      "expectPrice": 3361
     },
     {
       "date": "2017-06-01",
       "price": 3350,
-      "expectPrice": 3335
+      "expectPrice": 3340
     },
     {
       "date": "2017-06-02",
       "price": 3310,
-      "expectPrice": 3326
+      "expectPrice": 3321
     },
     {
       "date": "2017-06-05",
       "price": 3210,
-      "expectPrice": 3218
+      "expectPrice": 3225
     },
     {
       "date": "2017-06-06",
       "price": 3160,
-      "expectPrice": 3159
+      "expectPrice": 3170
     },
     {
       "date": "2017-06-07",
       "price": 3170,
-      "expectPrice": 3152
+      "expectPrice": 3151
     },
     {
       "date": "2017-06-08",
       "price": 3200,
-      "expectPrice": 3187
+      "expectPrice": 3218
     },
     {
       "date": "2017-06-09",
       "price": 3200,
-      "expectPrice": 3188
+      "expectPrice": 3215
     },
     {
       "date": "2017-06-12",
       "price": 3200,
-      "expectPrice": 3195
+      "expectPrice": 3218
     },
     {
       "date": "2017-06-13",
       "price": 3270,
-      "expectPrice": 3279
+      "expectPrice": 3250
     },
     {
       "date": "2017-06-14",
       "price": 3270,
-      "expectPrice": 3270
+      "expectPrice": 3280
     },
     {
       "date": "2017-06-15",
       "price": 3280,
-      "expectPrice": 3284
+      "expectPrice": 3264
     },
     {
       "date": "2017-06-16",
       "price": 3340,
-      "expectPrice": 3354
+      "expectPrice": 3323
     },
     {
       "date": "2017-06-19",
       "price": 3360,
-      "expectPrice": 3353
+      "expectPrice": 3351
     },
     {
       "date": "2017-06-20",
       "price": 3360,
-      "expectPrice": 3379
+      "expectPrice": 3365
     },
     {
       "date": "2017-06-21",
       "price": 3370,
-      "expectPrice": 3365
+      "expectPrice": 3387
     },
     {
       "date": "2017-06-22",
       "price": 3370,
-      "expectPrice": 3377
+      "expectPrice": 3383
     },
     {
       "date": "2017-06-23",
@@ -93,212 +93,212 @@
     {
       "date": "2017-06-26",
       "price": 3390,
-      "expectPrice": 3403
+      "expectPrice": 3394
     },
     {
       "date": "2017-06-27",
       "price": 3390,
-      "expectPrice": 3408
+      "expectPrice": 3403
     },
     {
       "date": "2017-06-28",
       "price": 3400,
-      "expectPrice": 3393
+      "expectPrice": 3387
     },
     {
       "date": "2017-06-29",
       "price": 3470,
-      "expectPrice": 3455
+      "expectPrice": 3450
     },
     {
       "date": "2017-06-30",
       "price": 3470,
-      "expectPrice": 3474
+      "expectPrice": 3482
     },
     {
       "date": "2017-07-03",
       "price": 3490,
-      "expectPrice": 3487
+      "expectPrice": 3500
     },
     {
       "date": "2017-07-04",
       "price": 3510,
-      "expectPrice": 3490
+      "expectPrice": 3502
     },
     {
       "date": "2017-07-05",
       "price": 3510,
-      "expectPrice": 3492
+      "expectPrice": 3509
     },
     {
       "date": "2017-07-06",
       "price": 3490,
-      "expectPrice": 3488
+      "expectPrice": 3485
     },
     {
       "date": "2017-07-07",
       "price": 3480,
-      "expectPrice": 3472
+      "expectPrice": 3468
     },
     {
       "date": "2017-07-10",
       "price": 3490,
-      "expectPrice": 3479
+      "expectPrice": 3476
     },
     {
       "date": "2017-07-11",
       "price": 3520,
-      "expectPrice": 3514
+      "expectPrice": 3521
     },
     {
       "date": "2017-07-12",
       "price": 3540,
-      "expectPrice": 3551
+      "expectPrice": 3522
     },
     {
       "date": "2017-07-13",
       "price": 3540,
-      "expectPrice": 3556
+      "expectPrice": 3544
     },
     {
       "date": "2017-07-14",
       "price": 3550,
-      "expectPrice": 3570
+      "expectPrice": 3543
     },
     {
       "date": "2017-07-17",
       "price": 3580,
-      "expectPrice": 3598
+      "expectPrice": 3599
     },
     {
       "date": "2017-07-18",
       "price": 3620,
-      "expectPrice": 3629
+      "expectPrice": 3626
     },
     {
       "date": "2017-07-19",
       "price": 3620,
-      "expectPrice": 3607
+      "expectPrice": 3628
     },
     {
       "date": "2017-07-20",
       "price": 3620,
-      "expectPrice": 3639
+      "expectPrice": 3623
     },
     {
       "date": "2017-07-21",
       "price": 3610,
-      "expectPrice": 3607
+      "expectPrice": 3608
     },
     {
       "date": "2017-07-24",
       "price": 3600,
-      "expectPrice": 3612
+      "expectPrice": 3613
     },
     {
       "date": "2017-07-25",
       "price": 3600,
-      "expectPrice": 3611
+      "expectPrice": 3609
     },
     {
       "date": "2017-07-26",
       "price": 3630,
-      "expectPrice": 3615
+      "expectPrice": 3631
     },
     {
       "date": "2017-07-27",
       "price": 3630,
-      "expectPrice": 3636
+      "expectPrice": 3626
     },
     {
       "date": "2017-07-28",
       "price": 3620,
-      "expectPrice": 3613
+      "expectPrice": 3630
     },
     {
       "date": "2017-07-31",
       "price": 3700,
-      "expectPrice": 3716
+      "expectPrice": 3699
     },
     {
       "date": "2017-08-01",
       "price": 3720,
-      "expectPrice": 3740
+      "expectPrice": 3704
     },
     {
       "date": "2017-08-02",
       "price": 3720,
-      "expectPrice": 3700
+      "expectPrice": 3730
     },
     {
       "date": "2017-08-03",
       "price": 3720,
-      "expectPrice": 3732
+      "expectPrice": 3739
     },
     {
       "date": "2017-08-04",
       "price": 3760,
-      "expectPrice": 3778
+      "expectPrice": 3751
     },
     {
       "date": "2017-08-07",
       "price": 3930,
-      "expectPrice": 3923
+      "expectPrice": 3943
     },
     {
       "date": "2017-08-08",
       "price": 3960,
-      "expectPrice": 3973
+      "expectPrice": 3951
     },
     {
       "date": "2017-08-09",
       "price": 3950,
-      "expectPrice": 3966
+      "expectPrice": 3960
     },
     {
       "date": "2017-08-10",
       "price": 4040,
-      "expectPrice": 4052
+      "expectPrice": 4057
     },
     {
       "date": "2017-08-11",
       "price": 4090,
-      "expectPrice": 4073
+      "expectPrice": 4108
     },
     {
       "date": "2017-08-14",
       "price": 4060,
-      "expectPrice": 4073
+      "expectPrice": 4059
     },
     {
       "date": "2017-08-15",
       "price": 4040,
-      "expectPrice": 4043
+      "expectPrice": 4057
     },
     {
       "date": "2017-08-16",
       "price": 3990,
-      "expectPrice": 3971
+      "expectPrice": 3995
     },
     {
       "date": "2017-08-17",
       "price": 3990,
-      "expectPrice": 3985
+      "expectPrice": 3990
     },
     {
       "date": "2017-08-18",
       "price": 4020,
-      "expectPrice": 4029
+      "expectPrice": 4005
     },
     {
       "date": "2017-08-21",
       "price": 4090,
-      "expectPrice": 4109
+      "expectPrice": 4072
     },
     {
       "date": "2017-08-22",
       "price": 4080,
-      "expectPrice": 4082
+      "expectPrice": 4088
     },
     {
       "date": "2017-08-23",
@@ -308,112 +308,112 @@
     {
       "date": "2017-08-24",
       "price": 4010,
-      "expectPrice": 4014
+      "expectPrice": 3995
     },
     {
       "date": "2017-08-25",
       "price": 4020,
-      "expectPrice": 4019
+      "expectPrice": 4037
     },
     {
       "date": "2017-08-28",
       "price": 3965,
-      "expectPrice": 3948
+      "expectPrice": 3953
     },
     {
       "date": "2017-08-29",
       "price": 3965,
-      "expectPrice": 3962
+      "expectPrice": 3968
     },
     {
       "date": "2017-08-30",
       "price": 3965,
-      "expectPrice": 3978
+      "expectPrice": 3962
     },
     {
       "date": "2017-08-31",
       "price": 3940,
-      "expectPrice": 3933
+      "expectPrice": 3947
     },
     {
       "date": "2017-09-01",
       "price": 3990,
-      "expectPrice": 3977
+      "expectPrice": 3989
     },
     {
       "date": "2017-09-04",
       "price": 4090,
-      "expectPrice": 4089
+      "expectPrice": 4074
     },
     {
       "date": "2017-09-05",
       "price": 4070,
-      "expectPrice": 4076
+      "expectPrice": 4065
     },
     {
       "date": "2017-09-06",
       "price": 4060,
-      "expectPrice": 4053
+      "expectPrice": 4062
     },
     {
       "date": "2017-09-07",
       "price": 4060,
-      "expectPrice": 4071
+      "expectPrice": 4049
     },
     {
       "date": "2017-09-08",
       "price": 4020,
-      "expectPrice": 4007
+      "expectPrice": 4034
     },
     {
       "date": "2017-09-11",
       "price": 4000,
-      "expectPrice": 3980
+      "expectPrice": 3984
     },
     {
       "date": "2017-09-12",
       "price": 4020,
-      "expectPrice": 4025
+      "expectPrice": 4007
     },
     {
       "date": "2017-09-13",
       "price": 4020,
-      "expectPrice": 4020
+      "expectPrice": 4013
     },
     {
       "date": "2017-09-14",
       "price": 3990,
-      "expectPrice": 3988
+      "expectPrice": 3990
     },
     {
       "date": "2017-09-15",
       "price": 3945,
-      "expectPrice": 3938
+      "expectPrice": 3953
     },
     {
       "date": "2017-09-18",
       "price": 3940,
-      "expectPrice": 3923
+      "expectPrice": 3928
     },
     {
       "date": "2017-09-19",
       "price": 3900,
-      "expectPrice": 3903
+      "expectPrice": 3897
     },
     {
       "date": "2017-09-20",
       "price": 3900,
-      "expectPrice": 3920
+      "expectPrice": 3911
     },
     {
       "date": "2017-09-21",
       "price": 3860,
-      "expectPrice": 3842
+      "expectPrice": 3843
     },
     {
       "date": "2017-09-22",
       "price": 3790,
-      "expectPrice": 3774
+      "expectPrice": 3772
     },
     {
       "date": "2017-09-25",
@@ -423,7 +423,7 @@
     {
       "date": "2017-09-26",
       "price": 3700,
-      "expectPrice": 3703
+      "expectPrice": 3717
     },
     {
       "date": "2017-09-27",
@@ -433,57 +433,57 @@
     {
       "date": "2017-09-28",
       "price": 3700,
-      "expectPrice": 3693
+      "expectPrice": 3709
     },
     {
       "date": "2017-09-29",
       "price": 3685,
-      "expectPrice": 3670
+      "expectPrice": 3700
     },
     {
       "date": "2017-09-30",
       "price": 3685,
-      "expectPrice": 3687
+      "expectPrice": 3692
     },
     {
       "date": "2017-10-09",
       "price": 3835,
-      "expectPrice": 3855
+      "expectPrice": 3851
     },
     {
       "date": "2017-10-10",
       "price": 3835,
-      "expectPrice": 3849
+      "expectPrice": 3826
     },
     {
       "date": "2017-10-11",
       "price": 3805,
-      "expectPrice": 3823
+      "expectPrice": 3794
     },
     {
       "date": "2017-10-12",
       "price": 3695,
-      "expectPrice": 3690
+      "expectPrice": 3689
     },
     {
       "date": "2017-10-13",
       "price": 3755,
-      "expectPrice": 3756
+      "expectPrice": 3741
     },
     {
       "date": "2017-10-16",
       "price": 3835,
-      "expectPrice": 3848
+      "expectPrice": 3836
     },
     {
       "date": "2017-10-17",
       "price": 3845,
-      "expectPrice": 3834
+      "expectPrice": 3845
     },
     {
       "date": "2017-10-18",
       "price": 3845,
-      "expectPrice": 3848
+      "expectPrice": 3826
     },
     {
       "date": "2017-10-19",
@@ -493,357 +493,357 @@
     {
       "date": "2017-10-20",
       "price": 3825,
-      "expectPrice": 3810
+      "expectPrice": 3823
     },
     {
       "date": "2017-10-23",
       "price": 3930,
-      "expectPrice": 3927
+      "expectPrice": 3934
     },
     {
       "date": "2017-10-24",
       "price": 3940,
-      "expectPrice": 3948
+      "expectPrice": 3944
     },
     {
       "date": "2017-10-25",
       "price": 3940,
-      "expectPrice": 3938
+      "expectPrice": 3934
     },
     {
       "date": "2017-10-26",
       "price": 3940,
-      "expectPrice": 3955
+      "expectPrice": 3959
     },
     {
       "date": "2017-10-27",
       "price": 3910,
-      "expectPrice": 3891
+      "expectPrice": 3929
     },
     {
       "date": "2017-10-30",
       "price": 3870,
-      "expectPrice": 3859
+      "expectPrice": 3878
     },
     {
       "date": "2017-10-31",
       "price": 3870,
-      "expectPrice": 3868
+      "expectPrice": 3859
     },
     {
       "date": "2017-11-01",
       "price": 3870,
-      "expectPrice": 3871
+      "expectPrice": 3852
     },
     {
       "date": "2017-11-02",
       "price": 3870,
-      "expectPrice": 3860
+      "expectPrice": 3870
     },
     {
       "date": "2017-11-03",
       "price": 3840,
-      "expectPrice": 3825
+      "expectPrice": 3837
     },
     {
       "date": "2017-11-06",
       "price": 3840,
-      "expectPrice": 3823
+      "expectPrice": 3834
     },
     {
       "date": "2017-11-07",
       "price": 3860,
-      "expectPrice": 3865
+      "expectPrice": 3877
     },
     {
       "date": "2017-11-08",
       "price": 3860,
-      "expectPrice": 3852
+      "expectPrice": 3880
     },
     {
       "date": "2017-11-09",
       "price": 3930,
-      "expectPrice": 3911
+      "expectPrice": 3945
     },
     {
       "date": "2017-11-10",
       "price": 3910,
-      "expectPrice": 3921
+      "expectPrice": 3907
     },
     {
       "date": "2017-11-13",
       "price": 3950,
-      "expectPrice": 3957
+      "expectPrice": 3967
     },
     {
       "date": "2017-11-14",
       "price": 3990,
-      "expectPrice": 3985
+      "expectPrice": 4007
     },
     {
       "date": "2017-11-15",
       "price": 3990,
-      "expectPrice": 3988
+      "expectPrice": 4004
     },
     {
       "date": "2017-11-16",
       "price": 3990,
-      "expectPrice": 3997
+      "expectPrice": 3992
     },
     {
       "date": "2017-11-17",
       "price": 3990,
-      "expectPrice": 3979
+      "expectPrice": 3974
     },
     {
       "date": "2017-11-20",
       "price": 3990,
-      "expectPrice": 4000
+      "expectPrice": 4008
     },
     {
       "date": "2017-11-21",
       "price": 3990,
-      "expectPrice": 3993
+      "expectPrice": 3998
     },
     {
       "date": "2017-11-22",
       "price": 3990,
-      "expectPrice": 3998
+      "expectPrice": 4003
     },
     {
       "date": "2017-11-23",
       "price": 4030,
-      "expectPrice": 4022
+      "expectPrice": 4012
     },
     {
       "date": "2017-11-24",
       "price": 4030,
-      "expectPrice": 4038
+      "expectPrice": 4012
     },
     {
       "date": "2017-11-27",
       "price": 4050,
-      "expectPrice": 4059
+      "expectPrice": 4055
     },
     {
       "date": "2017-11-28",
       "price": 4080,
-      "expectPrice": 4077
+      "expectPrice": 4073
     },
     {
       "date": "2017-11-29",
       "price": 4080,
-      "expectPrice": 4097
+      "expectPrice": 4068
     },
     {
       "date": "2017-11-30",
       "price": 4150,
-      "expectPrice": 4140
+      "expectPrice": 4161
     },
     {
       "date": "2017-12-01",
       "price": 4150,
-      "expectPrice": 4150
+      "expectPrice": 4137
     },
     {
       "date": "2017-12-04",
       "price": 4220,
-      "expectPrice": 4218
+      "expectPrice": 4213
     },
     {
       "date": "2017-12-05",
       "price": 4320,
-      "expectPrice": 4335
+      "expectPrice": 4338
     },
     {
       "date": "2017-12-06",
       "price": 4320,
-      "expectPrice": 4340
+      "expectPrice": 4336
     },
     {
       "date": "2017-12-07",
       "price": 4300,
-      "expectPrice": 4319
+      "expectPrice": 4295
     },
     {
       "date": "2017-12-08",
       "price": 4300,
-      "expectPrice": 4317
+      "expectPrice": 4318
     },
     {
       "date": "2017-12-11",
       "price": 4300,
-      "expectPrice": 4290
+      "expectPrice": 4296
     },
     {
       "date": "2017-12-12",
       "price": 4280,
-      "expectPrice": 4274
+      "expectPrice": 4284
     },
     {
       "date": "2017-12-13",
       "price": 4280,
-      "expectPrice": 4291
+      "expectPrice": 4273
     },
     {
       "date": "2017-12-14",
       "price": 4280,
-      "expectPrice": 4297
+      "expectPrice": 4278
     },
     {
       "date": "2017-12-15",
       "price": 4220,
-      "expectPrice": 4217
+      "expectPrice": 4207
     },
     {
       "date": "2017-12-18",
       "price": 4220,
-      "expectPrice": 4236
+      "expectPrice": 4233
     },
     {
       "date": "2017-12-19",
       "price": 4220,
-      "expectPrice": 4237
+      "expectPrice": 4218
     },
     {
       "date": "2017-12-20",
       "price": 4190,
-      "expectPrice": 4199
+      "expectPrice": 4170
     },
     {
       "date": "2017-12-21",
       "price": 4190,
-      "expectPrice": 4173
+      "expectPrice": 4178
     },
     {
       "date": "2017-12-22",
       "price": 4190,
-      "expectPrice": 4203
+      "expectPrice": 4185
     },
     {
       "date": "2017-12-25",
       "price": 4100,
-      "expectPrice": 4105
+      "expectPrice": 4117
     },
     {
       "date": "2017-12-26",
       "price": 4010,
-      "expectPrice": 4023
+      "expectPrice": 4025
     },
     {
       "date": "2017-12-27",
       "price": 3950,
-      "expectPrice": 3955
+      "expectPrice": 3946
     },
     {
       "date": "2017-12-28",
       "price": 3930,
-      "expectPrice": 3949
+      "expectPrice": 3945
     },
     {
       "date": "2017-12-29",
       "price": 3930,
-      "expectPrice": 3920
+      "expectPrice": 3916
     },
     {
       "date": "2018-01-02",
       "price": 3960,
-      "expectPrice": 3948
+      "expectPrice": 3947
     },
     {
       "date": "2018-01-03",
       "price": 3960,
-      "expectPrice": 3949
+      "expectPrice": 3943
     },
     {
       "date": "2018-01-04",
       "price": 3930,
-      "expectPrice": 3910
+      "expectPrice": 3933
     },
     {
       "date": "2018-01-05",
       "price": 3900,
-      "expectPrice": 3886
+      "expectPrice": 3890
     },
     {
       "date": "2018-01-08",
       "price": 3800,
-      "expectPrice": 3816
+      "expectPrice": 3790
     },
     {
       "date": "2018-01-09",
       "price": 3800,
-      "expectPrice": 3819
+      "expectPrice": 3811
     },
     {
       "date": "2018-01-10",
       "price": 3780,
-      "expectPrice": 3796
+      "expectPrice": 3772
     },
     {
       "date": "2018-01-11",
       "price": 3800,
-      "expectPrice": 3799
+      "expectPrice": 3805
     },
     {
       "date": "2018-01-12",
       "price": 3800,
-      "expectPrice": 3810
+      "expectPrice": 3799
     },
     {
       "date": "2018-01-15",
       "price": 3700,
-      "expectPrice": 3697
+      "expectPrice": 3706
     },
     {
       "date": "2018-01-16",
       "price": 3670,
-      "expectPrice": 3672
+      "expectPrice": 3683
     },
     {
       "date": "2018-01-17",
       "price": 3670,
-      "expectPrice": 3681
+      "expectPrice": 3655
     },
     {
       "date": "2018-01-18",
       "price": 3680,
-      "expectPrice": 3700
+      "expectPrice": 3692
     },
     {
       "date": "2018-01-19",
       "price": 3700,
-      "expectPrice": 3689
+      "expectPrice": 3702
     },
     {
       "date": "2018-01-22",
       "price": 3810,
-      "expectPrice": 3790
+      "expectPrice": 3802
     },
     {
       "date": "2018-01-23",
       "price": 3810,
-      "expectPrice": 3830
+      "expectPrice": 3812
     },
     {
       "date": "2018-01-24",
       "price": 3780,
-      "expectPrice": 3796
+      "expectPrice": 3776
     },
     {
       "date": "2018-01-25",
       "price": 3780,
-      "expectPrice": 3771
+      "expectPrice": 3780
     },
     {
       "date": "2018-01-26",
       "price": 3810,
-      "expectPrice": 3803
+      "expectPrice": 3828
     },
     {
       "date": "2018-01-29",
       "price": 3800,
-      "expectPrice": 3812
+      "expectPrice": 3813
     },
     {
       "date": "2018-01-30",
@@ -853,387 +853,387 @@
     {
       "date": "2018-01-31",
       "price": 3780,
-      "expectPrice": 3772
+      "expectPrice": 3796
     },
     {
       "date": "2018-02-01",
       "price": 3750,
-      "expectPrice": 3731
+      "expectPrice": 3745
     },
     {
       "date": "2018-02-02",
       "price": 3750,
-      "expectPrice": 3737
+      "expectPrice": 3747
     },
     {
       "date": "2018-02-05",
       "price": 3760,
-      "expectPrice": 3744
+      "expectPrice": 3768
     },
     {
       "date": "2018-02-06",
       "price": 3800,
-      "expectPrice": 3780
+      "expectPrice": 3818
     },
     {
       "date": "2018-02-07",
       "price": 3800,
-      "expectPrice": 3799
+      "expectPrice": 3793
     },
     {
       "date": "2018-02-08",
       "price": 3800,
-      "expectPrice": 3789
+      "expectPrice": 3791
     },
     {
       "date": "2018-02-09",
       "price": 3800,
-      "expectPrice": 3790
+      "expectPrice": 3783
     },
     {
       "date": "2018-02-11",
       "price": 3800,
-      "expectPrice": 3790
+      "expectPrice": 3816
     },
     {
       "date": "2018-02-12",
       "price": 3800,
-      "expectPrice": 3794
+      "expectPrice": 3806
     },
     {
       "date": "2018-02-13",
       "price": 3800,
-      "expectPrice": 3794
+      "expectPrice": 3795
     },
     {
       "date": "2018-02-14",
       "price": 3800,
-      "expectPrice": 3816
+      "expectPrice": 3793
     },
     {
       "date": "2018-02-22",
       "price": 3800,
-      "expectPrice": 3792
+      "expectPrice": 3801
     },
     {
       "date": "2018-02-23",
       "price": 3800,
-      "expectPrice": 3781
+      "expectPrice": 3807
     },
     {
       "date": "2018-02-24",
       "price": 3800,
-      "expectPrice": 3809
+      "expectPrice": 3789
     },
     {
       "date": "2018-02-26",
       "price": 3900,
-      "expectPrice": 3908
+      "expectPrice": 3891
     },
     {
       "date": "2018-02-27",
       "price": 3950,
-      "expectPrice": 3959
+      "expectPrice": 3954
     },
     {
       "date": "2018-02-28",
       "price": 3950,
-      "expectPrice": 3934
+      "expectPrice": 3931
     },
     {
       "date": "2018-03-01",
       "price": 3950,
-      "expectPrice": 3930
+      "expectPrice": 3938
     },
     {
       "date": "2018-03-02",
       "price": 3940,
-      "expectPrice": 3958
+      "expectPrice": 3931
     },
     {
       "date": "2018-03-05",
       "price": 3920,
-      "expectPrice": 3914
+      "expectPrice": 3915
     },
     {
       "date": "2018-03-06",
       "price": 3900,
-      "expectPrice": 3901
+      "expectPrice": 3900
     },
     {
       "date": "2018-03-07",
       "price": 3910,
-      "expectPrice": 3890
+      "expectPrice": 3913
     },
     {
       "date": "2018-03-08",
       "price": 3910,
-      "expectPrice": 3919
+      "expectPrice": 3892
     },
     {
       "date": "2018-03-09",
       "price": 3840,
-      "expectPrice": 3859
+      "expectPrice": 3847
     },
     {
       "date": "2018-03-12",
       "price": 3800,
-      "expectPrice": 3780
+      "expectPrice": 3820
     },
     {
       "date": "2018-03-13",
       "price": 3750,
-      "expectPrice": 3748
+      "expectPrice": 3769
     },
     {
       "date": "2018-03-14",
       "price": 3720,
-      "expectPrice": 3710
+      "expectPrice": 3739
     },
     {
       "date": "2018-03-15",
       "price": 3720,
-      "expectPrice": 3703
+      "expectPrice": 3710
     },
     {
       "date": "2018-03-16",
       "price": 3720,
-      "expectPrice": 3721
+      "expectPrice": 3711
     },
     {
       "date": "2018-03-19",
       "price": 3720,
-      "expectPrice": 3737
+      "expectPrice": 3732
     },
     {
       "date": "2018-03-20",
       "price": 3680,
-      "expectPrice": 3678
+      "expectPrice": 3693
     },
     {
       "date": "2018-03-21",
       "price": 3680,
-      "expectPrice": 3677
+      "expectPrice": 3675
     },
     {
       "date": "2018-03-22",
       "price": 3680,
-      "expectPrice": 3676
+      "expectPrice": 3672
     },
     {
       "date": "2018-03-23",
       "price": 3560,
-      "expectPrice": 3553
+      "expectPrice": 3575
     },
     {
       "date": "2018-03-26",
       "price": 3490,
-      "expectPrice": 3479
+      "expectPrice": 3499
     },
     {
       "date": "2018-03-27",
       "price": 3450,
-      "expectPrice": 3441
+      "expectPrice": 3452
     },
     {
       "date": "2018-03-28",
       "price": 3460,
-      "expectPrice": 3465
+      "expectPrice": 3441
     },
     {
       "date": "2018-03-29",
       "price": 3460,
-      "expectPrice": 3480
+      "expectPrice": 3447
     },
     {
       "date": "2018-03-30",
       "price": 3460,
-      "expectPrice": 3453
+      "expectPrice": 3478
     },
     {
       "date": "2018-04-02",
       "price": 3700,
-      "expectPrice": 3696
+      "expectPrice": 3684
     },
     {
       "date": "2018-04-03",
       "price": 3680,
-      "expectPrice": 3695
+      "expectPrice": 3693
     },
     {
       "date": "2018-04-04",
       "price": 3630,
-      "expectPrice": 3616
+      "expectPrice": 3626
     },
     {
       "date": "2018-04-08",
       "price": 3610,
-      "expectPrice": 3627
+      "expectPrice": 3607
     },
     {
       "date": "2018-04-09",
       "price": 3600,
-      "expectPrice": 3608
+      "expectPrice": 3602
     },
     {
       "date": "2018-04-10",
       "price": 3620,
-      "expectPrice": 3620
+      "expectPrice": 3608
     },
     {
       "date": "2018-04-11",
       "price": 3620,
-      "expectPrice": 3611
+      "expectPrice": 3601
     },
     {
       "date": "2018-04-12",
       "price": 3620,
-      "expectPrice": 3604
+      "expectPrice": 3608
     },
     {
       "date": "2018-04-13",
       "price": 3620,
-      "expectPrice": 3616
+      "expectPrice": 3606
     },
     {
       "date": "2018-04-16",
       "price": 3650,
-      "expectPrice": 3658
+      "expectPrice": 3661
     },
     {
       "date": "2018-04-17",
       "price": 3650,
-      "expectPrice": 3653
+      "expectPrice": 3662
     },
     {
       "date": "2018-04-18",
       "price": 3670,
-      "expectPrice": 3651
+      "expectPrice": 3672
     },
     {
       "date": "2018-04-19",
       "price": 3670,
-      "expectPrice": 3678
+      "expectPrice": 3681
     },
     {
       "date": "2018-04-20",
       "price": 3700,
-      "expectPrice": 3689
+      "expectPrice": 3684
     },
     {
       "date": "2018-04-23",
       "price": 3740,
-      "expectPrice": 3729
+      "expectPrice": 3758
     },
     {
       "date": "2018-04-24",
       "price": 3780,
-      "expectPrice": 3776
+      "expectPrice": 3765
     },
     {
       "date": "2018-04-25",
       "price": 3810,
-      "expectPrice": 3816
+      "expectPrice": 3817
     },
     {
       "date": "2018-04-26",
       "price": 3810,
-      "expectPrice": 3796
+      "expectPrice": 3826
     },
     {
       "date": "2018-04-27",
       "price": 3810,
-      "expectPrice": 3822
+      "expectPrice": 3830
     },
     {
       "date": "2018-04-28",
       "price": 3830,
-      "expectPrice": 3848
+      "expectPrice": 3826
     },
     {
       "date": "2018-05-02",
       "price": 3900,
-      "expectPrice": 3885
+      "expectPrice": 3917
     },
     {
       "date": "2018-05-03",
       "price": 3940,
-      "expectPrice": 3942
+      "expectPrice": 3936
     },
     {
       "date": "2018-05-04",
       "price": 3940,
-      "expectPrice": 3948
+      "expectPrice": 3954
     },
     {
       "date": "2018-05-07",
       "price": 3920,
-      "expectPrice": 3927
+      "expectPrice": 3920
     },
     {
       "date": "2018-05-08",
       "price": 3880,
-      "expectPrice": 3872
+      "expectPrice": 3866
     },
     {
       "date": "2018-05-09",
       "price": 3840,
-      "expectPrice": 3838
+      "expectPrice": 3820
     },
     {
       "date": "2018-05-10",
       "price": 3820,
-      "expectPrice": 3818
+      "expectPrice": 3834
     },
     {
       "date": "2018-05-11",
       "price": 3820,
-      "expectPrice": 3810
+      "expectPrice": 3800
     },
     {
       "date": "2018-05-14",
       "price": 3840,
-      "expectPrice": 3837
+      "expectPrice": 3848
     },
     {
       "date": "2018-05-15",
       "price": 3870,
-      "expectPrice": 3889
+      "expectPrice": 3850
     },
     {
       "date": "2018-05-16",
       "price": 3870,
-      "expectPrice": 3865
+      "expectPrice": 3882
     },
     {
       "date": "2018-05-17",
       "price": 3870,
-      "expectPrice": 3862
+      "expectPrice": 3886
     },
     {
       "date": "2018-05-18",
       "price": 3870,
-      "expectPrice": 3881
+      "expectPrice": 3855
     },
     {
       "date": "2018-05-21",
       "price": 3870,
-      "expectPrice": 3876
+      "expectPrice": 3860
     },
     {
       "date": "2018-05-22",
       "price": 3870,
-      "expectPrice": 3876
+      "expectPrice": 3863
     },
     {
       "date": "2018-05-23",
       "price": 3850,
-      "expectPrice": 3845
+      "expectPrice": 3869
     },
     {
       "date": "2018-05-24",
       "price": 3830,
-      "expectPrice": 3820
+      "expectPrice": 3840
     },
     {
       "date": "2018-05-25",

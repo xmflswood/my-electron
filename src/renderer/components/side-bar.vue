@@ -7,7 +7,7 @@
       text-color="#bfbfbc"
       active-text-color="#f2f2f2"
       style="height: 100%;border: none;">
-      <el-menu-item index="/" :disabled="disabled">
+      <el-menu-item index="/index" :disabled="disabled">
         <div slot="title" class="menu-item" :disabled="disabled">首页
           <i class="icon iconfont icon-shouye"></i>
         </div>
@@ -53,6 +53,8 @@
       if (!JSON.parse(fs.readFileSync(dbPath))['方坯']) {
         this.$router.replace({name: 'else'})
         this.disabled = true
+      } else {
+        this.$router.replace({name: 'index'})
       }
     },
     computed: {
