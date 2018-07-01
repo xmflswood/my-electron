@@ -9,28 +9,37 @@
       style="height: 100%;border: none;">
       <el-menu-item index="/index" :disabled="disabled">
         <div slot="title" class="menu-item" :disabled="disabled">首页
-          <i class="icon iconfont icon-shouye"></i>
+          <i class="icon iconfont icon-zhibiao"></i>
+          <div class="en">Monitoring table</div>
         </div>
       </el-menu-item>
       <el-menu-item index="/contact" :disabled="disabled">
         <div slot="title" class="menu-item">合同档案管理
           <i class="icon iconfont icon-dangan"></i>
+          <div class="en">Contact Management</div>
         </div>
       </el-menu-item>
       <el-menu-item index="/data-k" :disabled="disabled">
         <div slot="title" class="menu-item">K值数据库
           <i class="icon iconfont icon-chilun"></i>
+          <div class="en">Data of K</div>
         </div>
       </el-menu-item>
       <el-menu-item index="/data-search" :disabled="disabled">
         <div slot="title" class="menu-item">数据查询
           <i class="icon iconfont icon-sousuo"></i>
+          <div class="en">Data Search</div>
         </div>
       </el-menu-item>
       <el-menu-item index="/else">
         <div slot="title" class="menu-item">其他
+          <div class="en">Else</div>
         </div>
       </el-menu-item>
+      <!-- <el-menu-item index="/test">
+        <div slot="title" class="menu-item">测试
+        </div>
+      </el-menu-item> -->
     </el-menu>
   </div>
 </template>
@@ -79,9 +88,19 @@
   .menu-item {
     font-weight: bold;
     font-size: 18px;
+    position: relative;
+    top: -4px;
   }
   .menu-item i {
     float: right;
     font-size: 22px;
+    position: relative;
+    top: 4px;
+  }
+  .en {
+    font-size: 12px;
+    position: absolute;
+    top: 17px;
+    font-size: 12px;
   }
 </style>

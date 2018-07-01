@@ -5,6 +5,7 @@ import contact from '../pages/contact.vue'
 import dataK from '../pages/data-k.vue'
 import dataSearch from '../pages/data-search.vue'
 import elsePage from '../pages/else.vue'
+import test from '../pages/test.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/else',
       name: 'else',
       component: elsePage
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
     }
   ]
 })

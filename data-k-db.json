@@ -8,5 +8,25 @@
         "rate": "2"
       }
     ]
+  },
+  {
+    "kName": "231",
+    "kNum": "32",
+    "materials": [
+      {
+        "name": "方坯",
+        "rate": "2"
+      }
+    ]
+  },
+  {
+    "kName": "t",
+    "kNum": "tttt",
+    "materials": [
+      {
+        "name": "方坯",
+        "rate": "200"
+      }
+    ]
   }
 ]

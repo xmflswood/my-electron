@@ -4,18 +4,23 @@
       <div class="tips color-main">
         <div class="tips-title">{{name}}均价</div>
         <div class="tips-price">{{price}}</div>
-        <!-- <div class="rate">
-          <span style="margin-right: 20px;">
+        <div class="rate" v-if="rate">
+          <!-- <span style="margin-right: 20px;">
             月同比
             <i class="icon iconfont icon-msnui-triangle-down color-red"></i>
             12%
+          </span> -->
+          <span v-if="rate < 0">
+            同期环比
+            <i class="icon iconfont icon-msnui-triangle-down color-red"></i>
+            {{rate}}%
           </span>
-          <span>
-            月环比
+          <span v-if="rate > 0">
+            同期环比
             <i class="icon iconfont icon-msnui-triangle-up color-green"></i>
-            12%
+            {{rate}}%
           </span>
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="ec-box color-main" :style="{float: index%2 === 0 ? 'right' : 'left', width: index === 2 ? '100%' : '60%'}">
@@ -43,7 +48,8 @@
       },
       price: {
         type: String
-      }
+      },
+      oldPrice: {}
     },
     data () {
       return {
@@ -85,6 +91,14 @@
           case 2:
             return '合同'
         }
+      },
+      rate () {
+        if (this.index === 0) {
+          if (this.price && this.oldPrice) {
+            return Number(((+this.price - this.oldPrice) / this.oldPrice) * 100).toFixed(2)
+          }
+        }
+        return false
       }
     }
   }

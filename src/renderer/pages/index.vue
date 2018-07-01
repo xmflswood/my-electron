@@ -36,6 +36,7 @@
         v-for="(i, index) in source"
         :k="k"
         :price="prices[index]"
+        :oldPrice="oldPrices[index]"
         :key="i"
         :index="index"
         :ref="'e' + index">
@@ -62,6 +63,7 @@
         canShow: false,
         dates: '',
         allData: [],
+        oldAllData: [],
         k: '--',
         allK: [],
         kOptions: [],
@@ -81,7 +83,8 @@
           max: null,
           dates: []
         },
-        prices: ['--', '--']
+        prices: ['--', '--'],
+        oldPrices: []
       }
     },
     mounted () {
@@ -155,6 +158,10 @@
         this.$refs['e0'][0].setOption(o)
         // eslint-disable-next-line
         this.$set(this.prices, 0, Number(eval(this.main.price.join('+'))  / this.main.dates.length).toFixed(2))
+        if (this.oldAllData.length > 0) {
+          // eslint-disable-next-line
+          this.$set(this.oldPrices, 0, Number(eval(this.oldAllData.map(i => i.price).join('+'))  / this.main.dates.length).toFixed(2))
+        }
       },
       setData1 () {
         if (!this.k || this.k === '--') return
@@ -186,6 +193,10 @@
         this.$refs['e1'][0].setOption(o)
         // eslint-disable-next-line
         this.$set(this.prices, 1, Number(eval(truePrice.join('+'))  / this.main.dates.length).toFixed(2))
+        if (this.oldAllData.length > 0) {
+          // eslint-disable-next-line
+          this.$set(this.oldPrices, 1, Number(eval(this.oldAllData.map(i => i.price).map(i => Number(i * rate).toFixed(2)).join('+'))  / this.main.dates.length).toFixed(2))
+        }
       },
       setData2 () {
         if (!this.contactNum) return
@@ -257,6 +268,12 @@
           let d = window.$data
           let start = _.findIndex(d, {date: v[0]})
           let end = _.findIndex(d, {date: v[1]})
+          let ot = end - start + 1
+          this.oldAllData = []
+          this.oldPrices = []
+          if (start - ot >= 0) {
+            this.oldAllData = _.cloneDeep(d.slice((start - ot), end + 1 - ot))
+          }
           this.allData = _.cloneDeep(d.slice(start, end + 1))
           this.setMain()
           this.setData0()

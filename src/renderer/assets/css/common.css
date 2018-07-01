@@ -83,3 +83,11 @@ html, body, #app {
   color: #5575c4;
   cursor: initial;
 }
+.el-menu-item.is-active {
+  border-right: 3px solid #ffc000;
+}
+.el-button--primary {
+  /* background-color: #4472C4;
+  border-color: #4472C4;
+  font-weight: bold; */
+}

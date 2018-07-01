@@ -44,11 +44,14 @@
       <p v-if="tipsRP">均价为: <span class="color-yellow"> {{tipsRP}}元</span></p>
       <p v-if="tipsRate"><span>{{tipsText}}</span> <span :class="[{'color-green': tipsPrice < 0},{'color-yellow': tipsPrice >= 0}]"> {{' ' + tipsPrice + '元'}}</span></p>
     </div>
+    <el-button style="position: fixed;right: 100px;bottom: 50px;" size="middle" type="primary" @click="downloadMater" round>导出</el-button>
   </div>
 </template>
 
 <script>
   import {remote} from 'electron'
+  import XLSX from 'xlsx'
+  var FileSaver = require('file-saver')
   import echartsPrice from '../components/search-echarts-price.vue'
   import _ from 'lodash'
   const path = require('path')
@@ -60,6 +63,7 @@
     },
     data () {
       return {
+        exportList: [],
         sub: '',
         subOptions: [],
         dates: [],
@@ -198,6 +202,7 @@
         this.tipsRP = Number(eval(this.main.price.join('+'))  / this.main.dates.length).toFixed(2)
         this.tipsRate = ''
         this.$refs['ec'].setOption(o)
+        this.setXlsx(this.main.dates, this.main.price)
       },
       async setData1 () {
         this.index = 1
@@ -233,6 +238,7 @@
         this.tipsRP = Number(eval(truePrice.join('+'))  / this.main.dates.length).toFixed(2)
         this.tipsRate = ''
         this.$refs['ec'].setOption(o)
+        this.setXlsx(this.main.dates, truePrice)
       },
       async setData2 () {
         this.ecTitle = '合同'
@@ -297,35 +303,50 @@
         this.tipsText = `应${this.tipsRate < 0 ? '少' : '多'}付供应商:`
         this.tipsRP = null
         this.$refs['ec'].setOption(o)
+        this.setXlsx(this.main.dates, trueRates, 'hetong')
       },
-      async setData3 () {
-        this.index = 2
-        await this.reflow()
-        let rate = _.find(this.allK, {kName: this.sub}).materials[0].rate * 0.01
-        let o = {
-          series: [
-            {
-              name: '价格',
-              data: this.main.price.map(i => Number(i * rate).toFixed(2))
-            },
-            {
-              name: '预期价格',
-              data: this.main.expectPrice.map(i => Number(i * rate).toFixed(2))
-            }
-          ],
-          xAxis: [
-            {
-              data: this.main.dates
-            }
-          ],
-          yAxis: [
-            {
-              min: Number(this.main.min * rate).toFixed(),
-              max: Number(this.main.max * rate).toFixed()
-            }
-          ]
+      setXlsx(dates, price, type) {
+        let a = []
+        if (type !== 'hetong') {
+          for (let i = 0; i < dates.length; i += 1) {
+            a.push({
+              '日期': dates[i],
+              '价格': price[i]
+            })
+          }
+        } else {
+          for (let i = 0; i < dates.length; i += 1) {
+            a.push({
+              '日期': dates[i],
+              '合同涨幅%': price[i]
+            })
+          }
         }
-        this.$refs['ec'].setOption(o)
+        this.exportList = a
+      },
+      downloadMater (){
+        const defaultCellStyle =  { font: { name: "Verdana", sz: 11, color: "FF00FF88"}, fill: {fgColor: {rgb: "FFFFAA00"}}};
+        const wopts = { bookType:'xlsx', bookSST:false, type:'binary', defaultCellStyle: defaultCellStyle, showGridLines: false};
+        const wb = { SheetNames: ['Sheet1'], Sheets: {}, Props: {} }; 
+        let data = this.exportList
+        wb.Sheets['Sheet1'] = XLSX.utils.json_to_sheet(data)
+        
+        //创建二进制对象写入转换好的字节流
+        let tmpDown =  new Blob([this.s2ab(XLSX.write(wb, wopts))], { type: "application/octet-stream" })
+        FileSaver.saveAs(tmpDown, "hello world.xls");
+      },
+      //字符串转字符流
+      s2ab (s) {
+        if (typeof ArrayBuffer !== 'undefined') {  
+            var buf = new ArrayBuffer(s.length);  
+            var view = new Uint8Array(buf);  
+            for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;  
+            return buf;  
+        } else {  
+            var buf = new Array(s.length);  
+            for (var i = 0; i != s.length; ++i) buf[i] = s.charCodeAt(i) & 0xFF;  
+            return buf;  
+        }
       }
     },
     watch: {
